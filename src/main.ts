@@ -107,14 +107,10 @@ export default {
       .on('a.tgme_header_link[href="https://t.me/beijiutalk"]', 
         replaceAttribute("href", "https://t.me", ""),
       )
-            // Download Telegram → 订阅频道 Subscribe channel + 改链接
+      // Download Telegram
       .on('a.tgme_channel_download_telegram', {
         element(element) {
           element.setAttribute("href", "https://t.me/beijiutalk");
-        },
-      })
-      .on('a.tgme_channel_download_telegram svg + *', {
-        element(element) {
           element.setInnerContent("Subscribe channel");
         },
       });

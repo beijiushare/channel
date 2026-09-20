@@ -112,6 +112,11 @@ export default {
         element(element) {
           element.setAttribute("href", "https://t.me/beijiutalk");
         },
+      })
+      .on('a.tgme_channel_download_telegram svg + *', {
+        element(element) {
+          element.setInnerContent("Subscribe channel");
+        },
       });
 
     if (Root.test(url)) {

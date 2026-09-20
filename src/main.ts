@@ -106,47 +106,7 @@ export default {
       // 页面顶部的链接 
       .on('a.tgme_header_link[href="https://t.me/beijiutalk"]', 
         replaceAttribute("href", "https://t.me", ""),
-      )
-      // Download Telegram → 订阅频道 Subscribe channel + 改链接
-      .on('a.tgme_channel_download_telegram', {
-        element(element) {
-          element.setAttribute("href", "https://t.me/beijiutalk");
-        },
-      })
-      .on('a.tgme_channel_download_telegram svg + *', {
-        element(element) {
-          element.setInnerContent("Subscribe channel");
-        },
-      })
-
-      // About → Sites
-      .on('.tgme_footer_column:nth-child(1) a', {
-        element(element) {
-          element.setAttribute("href", "https://www.beijiu.top/");
-          element.setInnerContent("Sites");
-        },
-      })
-      // Blog → Library
-      .on('.tgme_footer_column:nth-child(2) a', {
-        element(element) {
-          element.setAttribute("href", "https://library.beijiu.top/");
-          element.setInnerContent("Library");
-        },
-      })
-      // Apps → Channel
-      .on('.tgme_footer_column:nth-child(3) a', {
-        element(element) {
-          element.setAttribute("href", "https://channel.beijiu.top/");
-          element.setInnerContent("Channel");
-        },
-      })
-      // 第4个：Platform → Bilibili
-      .on('.tgme_footer_column:nth-child(4) a', {
-        element(element) {
-          element.setAttribute("href", "https://space.bilibili.com/3745019517210321");
-          element.setInnerContent("Bilibili");
-        },
-      });
+      );
 
     if (Root.test(url)) {
       return Response.redirect(`${origin}/s/${CHANNEL}`);

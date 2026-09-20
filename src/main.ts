@@ -99,12 +99,12 @@ export default {
         replaceAttribute("src", "https:/", ""),
       )
       // 帖子头部的用户链接
-      .on('.tgme_widget_message_user a[href="/beijiutalk"]', 
+      .on('.tgme_widget_message_user a[href="https://t.me/beijiutalk"]', 
         replaceAttribute("href", "https://t.me", ""),
       )
 
       // 页面顶部的链接 
-      .on('a.tgme_header_link[href="/beijiutalk"]', 
+      .on('a.tgme_header_link[href="https://t.me/beijiutalk"]', 
         replaceAttribute("href", "https://t.me", ""),
       );
 

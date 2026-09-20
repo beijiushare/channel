@@ -123,13 +123,12 @@ export default {
       .on('.tgme_footer', {
         element(element) {
           element.setInnerContent("");
-          element.append(
-            `<div class="tgme_footer_column"><h5><a href="https://www.beijiu.top/">Sites</a></h5></div>` +
-            `<div class="tgme_footer_column"><h5><a href="https://library.beijiu.top/">Library</a></h5></div>` +
-            `<div class="tgme_footer_column"><h5><a href="https://channel.beijiu.top/">Channel</a></h5></div>` +
-            `<div class="tgme_footer_column"><h5><a href="https://space.bilibili.com/3745019517210321">Bilibili</a></h5></div>`
-            { html: true }
-          );
+          const footerHtml =
+            '<div class="tgme_footer_column"><h5><a href="https://www.beijiu.top/">Sites</a></h5></div>' +
+            '<div class="tgme_footer_column"><h5><a href="https://library.beijiu.top/">Library</a></h5></div>' +
+            '<div class="tgme_footer_column"><h5><a href="https://channel.beijiutalk.top/">Channel</a></h5></div>' +
+            '<div class="tgme_footer_column"><h5><a href="https://space.bilibili.com/3745019517210321">Bilibili</a></h5></div>';
+          element.append(footerHtml, { html: true });
         },
       });
 

@@ -113,6 +113,30 @@ export default {
           element.setAttribute("href", "https://t.me/beijiutalk");
           element.setInnerContent("Subscribe channel");
         },
+      })
+      .on('.tgme_footer_column:nth-child(1) a', {
+        element(element) {
+          element.setAttribute("href", "https://www.beijiu.top/");
+          element.setInnerContent("Sites");
+        },
+      })
+      .on('.tgme_footer_column:nth-child(2) a', {
+        element(element) {
+          element.setAttribute("href", "https://library.beijiu.top/");
+          element.setInnerContent("Library");
+        },
+      })
+      .on('.tgme_footer_column:nth-child(3) a', {
+        element(element) {
+          element.setAttribute("href", "https://channel.beijiu.top/");
+          element.setInnerContent("Channel");
+        },
+      })
+      .on('.tgme_footer_column:nth-child(4) a', {
+        element(element) {
+          element.setAttribute("href", "https://space.bilibili.com/3745019517210321");
+          element.setInnerContent("Bilibili");
+        },
       });
 
     if (Root.test(url)) {

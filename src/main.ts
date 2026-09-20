@@ -106,7 +106,13 @@ export default {
       // 页面顶部的链接 
       .on('a.tgme_header_link[href="https://t.me/beijiutalk"]', 
         replaceAttribute("href", "https://t.me", ""),
-      );
+      )
+            // Download Telegram → 订阅频道 Subscribe channel + 改链接
+      .on('a.tgme_channel_download_telegram', {
+        element(element) {
+          element.setAttribute("href", "https://t.me/beijiutalk");
+        },
+      });
 
     if (Root.test(url)) {
       return Response.redirect(`${origin}/s/${CHANNEL}`);

@@ -119,16 +119,32 @@ export default {
         },
       })
 
-      // tgme_footer 替换
-      .on('.tgme_footer', {
+      // About → Sites
+      .on('.tgme_footer_column:nth-child(1) a', {
         element(element) {
-          element.setInnerContent("");
-          const footerHtml =
-            '<div class="tgme_footer_column"><h5><a href="https://www.beijiu.top/">Sites</a></h5></div>' +
-            '<div class="tgme_footer_column"><h5><a href="https://library.beijiu.top/">Library</a></h5></div>' +
-            '<div class="tgme_footer_column"><h5><a href="https://channel.beijiutalk.top/">Channel</a></h5></div>' +
-            '<div class="tgme_footer_column"><h5><a href="https://space.bilibili.com/3745019517210321">Bilibili</a></h5></div>';
-          element.append(footerHtml, { html: true });
+          element.setAttribute("href", "https://www.beijiu.top/");
+          element.setInnerContent("Sites");
+        },
+      })
+      // Blog → Library
+      .on('.tgme_footer_column:nth-child(2) a', {
+        element(element) {
+          element.setAttribute("href", "https://library.beijiu.top/");
+          element.setInnerContent("Library");
+        },
+      })
+      // Apps → Channel
+      .on('.tgme_footer_column:nth-child(3) a', {
+        element(element) {
+          element.setAttribute("href", "https://channel.beijiu.top/");
+          element.setInnerContent("Channel");
+        },
+      })
+      // 第4个：Platform → Bilibili
+      .on('.tgme_footer_column:nth-child(4) a', {
+        element(element) {
+          element.setAttribute("href", "https://space.bilibili.com/3745019517210321");
+          element.setInnerContent("Bilibili");
         },
       });
 

@@ -137,6 +137,12 @@ export default {
           element.setAttribute("href", "https://space.bilibili.com/3745019517210321");
           element.setInnerContent("Bilibili");
         },
+      })
+      //窄屏下
+      .on('a.tgme_channel_join_telegram', {
+        element(element) {
+          element.setAttribute("href", "https://t.me/beijiutalk");
+        },
       });
 
     if (Root.test(url)) {

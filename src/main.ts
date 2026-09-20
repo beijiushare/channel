@@ -115,7 +115,7 @@ export default {
       })
       .on('a.tgme_channel_download_telegram svg + *', {
         element(element) {
-          element.setInnerContent("订阅频道 Subscribe channel");
+          element.setInnerContent("Subscribe channel");
         },
       })
 
@@ -123,11 +123,12 @@ export default {
       .on('.tgme_footer', {
         element(element) {
           element.setInnerContent("");
-          element.insertAdjacentHTML("beforeend",
+          element.append(
             `<div class="tgme_footer_column"><h5><a href="https://www.beijiu.top/">Sites</a></h5></div>` +
             `<div class="tgme_footer_column"><h5><a href="https://library.beijiu.top/">Library</a></h5></div>` +
             `<div class="tgme_footer_column"><h5><a href="https://channel.beijiu.top/">Channel</a></h5></div>` +
             `<div class="tgme_footer_column"><h5><a href="https://space.bilibili.com/3745019517210321">Bilibili</a></h5></div>`
+            { html: true }
           );
         },
       });
